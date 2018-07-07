@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="DESCRIPTION" content="Tesina"> 
+	<meta name="KEYWORDS" content="Informatica","Alan Turing","Macchina di Turing"> 
+	<meta name="AUTHOR" content="Ferrari Lorenzo">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title align="center"> Alan Turing </title>
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+	<header>
+	<?php include ("nav.html"); ?>
+	</header>
+	<article>
+	<h1>Alan Turing</h1> <h2> Padre dell'Informatica </h2>
+	<hr>
+	<h3> LA CRITTOGRAFIA FINO AD OGGI. </h3> 
+	<p> La crittologia, la scienza che si occupa di mantenere le informazioni segrete, si divide in due grandi branche:  la crittografia, cioè l'arte di scrivere messaggi che siano indecifrabili da terzi, e la crittanalisi, che è viceversa l'arte di decrittare i messaggi cifrati. <br>
+	La crittografia è oggi entrata a far parte della vita di tutti i giorni e permette di far viaggiare in rete delle informazioni private. <br>
+	Per proteggere un messaggio il mittente trasforma il testo originale, chiamato plaintext, in un messaggio criptato, denominato ciphertext. 
+	Quest’ultimo viene poi trasmesso attraverso il canale di comunicazione e se viene intercettato non può essere ricostruito. <br>
+	Queste due operazioni sono dette rispettivamente cifratura e decifratura.</p>
+	<p>I tre principali problemi a cui fa fronte la crittografia sono: 
+	<ul>
+	<li>la segretezza, la quale impedisce che utenti non autorizzati possano intercettare o comunque comprendere informazioni importanti. </li>
+	<li>l'affidabilità, che consente di identificare in l'autore di un documento o di un messaggio.</li>
+	<li>l'autenticazione, che assicura l'identità degli interlocutori impedendo che qualcuno si spacci per qualcun altro.</li></ul></p>
+	<p>Alla base delle principali tecniche di crittografia c’è un cifrario, nel quale ogni carattere del testo da cifrare viene trasformato in un altro carattere mediante un algoritmo di crittografia.<br>
+	Esistono anche tecniche di crittografia alla base delle quali c’è un codice invece di un cifrario, nel quale ogni carattere rappresenta un’informazione.<br>
+	Per esempio la X potrebbe significare “Sono Lorenzo” e la Y “ho 19 anni”.<br>
+	Nel cifrario invece i caratteri che vengono utilizzati non hanno un significato particolare se non la funzione di rappresentare i caratteri del messaggio da trasmettere in un modo diverso.<br>
+	Per cifrare un testo occorrono quindi due cose:
+	<ul>
+	<li>Un algoritmo di cifratura.</li>
+	<li>Una chiave.</li></ul></p>
+	<p>I sistemi crittografici possono essere classificati in base a 3 differenti caratteristiche:
+	<ul>
+	<li>Il tipo di operazioni impiegate per trasformare il testo in chiaro.</li>
+	<li>Il modo in cui il testo in chiaro è elaborato.</li>
+	<li>Il numero di chiavi utilizzate.</li></ul>
+	Alla prima categoria appartengono il sistema di crittografia a sostituzione, in cui ogni elemento del testo in chiaro è trasformato in un altro elemento, e il sistema di crittografia a permutazione in cui gli elementi del testo in chiaro sono riorganizzati.<br>
+	Nella seconda categoria sono classificati il sistema di crittografia a blocchi, che prevede che il testo venga suddiviso in blocchi di N bit e che ogni blocco venga elaborato in modo indipendente dagli altri, e il sistema di crittografia a flusso, nel quale si elabora un quantitativo di bit senza una lunghezza predefinita.</p>
+	<p>Appartenenti alla terza categoria sono invece il sistema a chiave asimmetrica e il sistema a chiave simmetrica.<br>
+	La crittografia classica si basa sull’uso di chiavi simmetriche, ovvero chiavi uguali utilizzate sia per la cifratura che per la decifratura di un messaggio.<br>
+	Se l’utente A vuole comunicare con l’utente B, i due insieme devono concordare un algoritmo di cifratura ed una chiave K.<br>
+	<center><img src="immagini/simmetrica.jpg" alt="Crittografia Simmetrica"></center>
+	<br>Quindi se A vuole trasmettere un messaggio riservato a B deve cifrarlo usando l’algoritmo e la chiave prescelta: in questo modo il testo viene trasformato in una sequenza incomprensibile di caratteri che solo l’utente B può decifrare, utilizzando lo stesso algoritmo e la stessa chiave utilizzata per la cifratura.<br>
+	Questi algoritmi a chiave simmetrica, hanno però un problema: la chiave segreta deve essere scambiata tra i due interlocutori senza essere intercettata. <br>
+	Se la chiave viene compromessa infatti, non solo si può decifrare tutto il messaggio cifrato con quella chiave, ma si possono anche produrre dei messaggi falsi o alterare gli originali senza che il destinatario se ne renda conto.</p>
+
+	<p>Il problema della segretezza della chiave è stato quindi risolto con la crittografia a chiave asimmetrica, che fa uso di algoritmi basati su chiavi pubbliche.<br>
+	Questo tipo di algoritmi garantisce: 
+	<ul>
+	<li>Riservatezza del dialogo (confidenzialità): un ascoltatore non autorizzato non può decifrare la trasmissione.</li>
+	<li>Autenticità della provenienza del documento (autenticazione): il destinatario è certo dell’identità del mittente da cui ha ricevuto il testo perchè con la chiave pubblica, avuta da egli stesso, si riesce a decifrare il messaggio.</li>
+	<li>Integrità del documento (integrità): il destinatario è certo che il messaggio non può essere stato alterato.</li>
+	<li>Impossibilità di disconoscere la trasmissione o la ricezione del messaggio.</li>
+	</ul>
+	Essi si basano sull’uso di una chiave pubblica e di una chiave privata nella comunicazione tra due o più soggetti: la chiave privata è distribuita solo a un soggetto, mentre la chiave pubblica è distribuita a tutti i possibili soggetti con cui il primo vuole comunicare.<br>
+	Per leggere un testo cifrato inviato da qualcuno occorre soltanto la chiave privata del destinatario, mentre per scrivere e inviare a qualcuno un testo cifrato occorre soltanto la chiave privata del mittente. <br>
+	In ogni caso si fa uso solo della chiave privata, la quale non viene distribuita.<br>
+	Il sistema a chiave asimmetrica ha quindi i seguenti vantaggi:<br>
+	<ul>
+	<li>Avendo due chiavi si risolvono parzialmente i problemi di distribuzione.</li>
+	<li>Il meccanismo della codifica a doppia chiave ha una duplice valenza: di decodifica e di autenticazione.</li>
+	</ul>
+	Uno svantaggio però c’è, ed è il tempo che serve al messaggio per essere codificato e decodificato, il quale è molto alto. </br>
+	In generale, per garantire la riservatezza nell’algoritmo a chiave asimmetrica, se l’utente A vuole trasmettere all’utente B un documento che deve rimanere riservato, dovrà cifrare il documento con la chiave pubblica del destinatario, così che l’unica persona in grado di decifrarlo sarà proprio quest’ultimo, in quanto solo lui possiede la corrispondente chiave privata per farlo.</p>
+	<center><img src="immagini/asimmetrica.jpg" alt="Crittografia Asimmetrica"></center>
+
+	<p>Invece, se l’utente A vuole garantire l’autenticità del documento da lui trasmesso, dovrà usare la firma digitale, cioè dovrà cifrarlo con la propria chiave privata ed inviarlo insieme al documento originale al destinatario. <br>
+	Quest’ultimo potrà a sua volta verificarne la provenienza confrontando il messaggio originale con quello decifrato tramite chiave pubblica del mittente. <br>
+	La firma può poi essere abbinata alla normale cifratura, ottenendo messaggi firmati e cifrati.<br>
+	<center><img src="immagini/firma.jpg" alt="Firma Digitale"></center>
+
+	Ipotizzando che Bob voglia mandare un messaggio ad Alice: per prima cosa lo cifrerà con la propria chiave privata (firma) e poi con quella pubblica di Alice (cifratura), infine spedirà il messaggio. <br>
+	Quando Alice lo riceverà, prima lo decifrerà con la propria chiave privata, operazione che solo lei può fare e poi con quella pubblica di Bob.<br> 
+	Ciò che il mittente cifra con la propria chiave privata per garantire l'autenticità non è l'intero messaggio, ma una sua “impronta'', detta digest, ottenuta mediante una particolare funzione, detta funzione di hash. <br>
+	Il digest cifrato viene poi allegato al messaggio e ne costituisce la firma. <br>
+	Il destinatario calcola il digest del messaggio ricevuto e lo confronta con quello che ottiene decifrando con la chiave pubblica del mittente la firma allegata: se coincidono la firma è autentica.</p>
+
+
+
+	<p>Il più famoso algoritmo a chiave asimmetrica è l’RSA, inventato nel 1977, mentre il più comune algoritmo a chiave simmetrica è il DES, creato nel 1976. <br>
+	L’algoritmo DES si occupa della sicurezza e si basa su due caratteristiche: 
+	<ul>
+	<li>Confusion: rendere confusa la relazione tra il testo in chiaro e quello cifrato mediante la sostituzione dei caratteri in chiaro con caratteri diversi.</li>
+	<li>Diffusion: alterare la struttura del testo in chiaro spargendo i caratteri su tutto il testo cifrato, solitamente permutando i caratteri del testo in chiaro.</li>
+	</ul>
+	Ognuna di queste tecniche, se usate da sole o congiuntamente una sola volta, non garantiscono la sicurezza. <br>
+	Quindi l’idea di base è quella di ripetere molte volte le operazioni di confusione e diffusione.<br>
+	Nel DES queste operazioni sono realizzate attraverso una serie di permutazioni del messaggio e combinazioni di esso con la chiave.</p>
+
+	<p>L’algoritmo RSA si occupa anch’esso della sicurezza, ma si basa sulla difficoltà nell’eseguire la cifratura mediante la fattorizzazione di numeri a molte cifre.  <br>
+	Dati due numeri primi infatti è facile stabilire il loro prodotto, mentre è molto più difficile determinare, a partire da un determinato numero, quali numeri primi hanno prodotto quel risultato dopo essere stati moltiplicati tra loro. <br>
+	In questo modo si garantisce la sicurezza, perché l’operazione per trovare la chiave segreta partendo da quella pubblica è troppo complessa per essere eseguita. <br>
+	Avendo quindi una chiave privata costituita da una coppia di numeri Kpri = (N, Npri), la forza di questo algoritmo sta nella difficoltà di calcolo di Npri, poichè bisognerebbe trovare i due numeri primi che fattorizzano N.<br>
+	Il grosso problema dell’RSA e di tutti gli algoritmi asimmetrici però è la loro lentezza.</p>
+	<p>RSA infatti è molto più lento di DES sia dal punto di vista hardware che software.<br>
+	La soluzione a questo problema è quella di usare la crittografia simmetrica per cifrare i messaggi e la crittografia asimmetrica nella fase di scambio della chiave segreta simmetrica.<br>
+	In questo modo si protegge la distribuzione delle chiavi e si cifra più velocemente grazie alla maggior velocità della crittografia simmetrica.</p>
+	</article>
+</body>
+</html>

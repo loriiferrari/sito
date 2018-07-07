@@ -1,0 +1,39 @@
+		body {font-family: verdana; font-size: 18px; }
+		body.homepage {background-image: url(sfondo.jpg); font-family: verdana;     background-repeat: no-repeat; background-size: cover;}
+		body article{margin: 0 100px; background: rgba(255,255,255,0.8); padding: 50px; line-height: 1.4em; }
+		body article h1 {font-size: 2.5em; line-height: 1em; }
+		body article p {margin-bottom: 2em;}
+		body header nav {margin: 0 100px; padding: 0px; margin-bottom: 5px; }
+		body header nav ul { padding: 0; display: flex; justify-content:center; }
+		body header nav a {text-decoration: none; color: #333; font-weight: bold;}
+		body header nav ul li {width: 150px; list-style-type: none; text-align: center; padding: 5px; margin: 0; background-color: #ddd; }
+		body header nav ul li:hover {background-color: #bbb;}
+
+		.clear {clear:both;}
+		body img.floatleft {float:left; width:300px; margin-right: 10px}
+		body img.floatright {float:right; width:300px; margin-left: 10px}
+
+		#home   ul { padding: 0; margin: 0 100px;  padding: 0px; margin-bottom: 5px; background-color:#fff; margin-top: 80px;}
+		#home   a {text-decoration: none; color: #333; font-weight: bold; }
+		#home   ul li { display:block; min-width: 150px; list-style-type: none; text-align: center; padding: 20px; margin-bottom:3px;  border-bottom: 1px solid #666; background-color: #aaa;}
+		#home   ul li:first-child {display:none;}
+		#home   ul li:last-child {border-bottom: 0;}
+		#home   ul li:hover {background-color: #bbb;}
+
+		@media only screen and (max-width: 768px) {
+			body{font-size:10px;}
+			body article{margin: 0 0px; background: rgba(255,255,255,0.8); padding: 50px; line-height: 1.4em; }
+
+			#home   ul { padding: 0; margin: 0;  padding: 0px; margin-bottom: 5px; background-color:#fff; margin-top: 80px;}
+			#home   a {text-decoration: none; color: #333; font-weight: bold; }
+			#home   ul li { display:block; list-style-type: none; text-align: center; padding: 20px; margin-bottom:3px;  border-bottom: 1px solid #666; background-color: #aaa;}
+			#home   ul li:first-child {display:none;}
+			#home   ul li:last-child {border-bottom: 0;}
+			#home   ul li:hover {background-color: #bbb;}
+
+			
+		}
+
+
+
+
